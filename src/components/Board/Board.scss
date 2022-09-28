@@ -4,6 +4,9 @@
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(8, 1fr);
     grid-gap: 2rem;
+    padding: 1rem;
+    border: 0.5rem solid rgb(48, 226, 173);
+    border-radius: 1rem;
   }
 
   &__title {
@@ -46,6 +49,30 @@
       &:hover {
         cursor: pointer;
       }
+    }
+  }
+
+  &__change-turn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    border: 2px solid #000;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: aquamarine;
+    color: #0000ff;
+    font-size: 2rem;
+    font-weight: 600;
+    width: 60%;
+    &--X {
+      padding-left: 1rem;
+      color: #ff0000;
+    }
+    &--O {
+      padding-left: 1rem;
+      color: #0000ff;
     }
   }
 }

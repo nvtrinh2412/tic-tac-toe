@@ -4,6 +4,10 @@
   background-color: whitesmoke;
   box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.2);
   border-radius: 0.2rem;
+  &:hover {
+    background-color: lightgray;
+  }
+
   &__value {
     display: flex;
     justify-content: center;
@@ -21,7 +25,7 @@
       background-color: #ccccff;
     }
     &--winner {
-      background-color: #31ff31fd;
+      background-color: rgb(48, 226, 173);
     }
 
     &--disabled {

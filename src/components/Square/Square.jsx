@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Square.scss";
 
 const Square = (props) => {
@@ -13,10 +13,8 @@ const Square = (props) => {
     isEnd,
     currentValue,
   } = props;
-  const [value, setValue] = useState(currentValue);
   const handleClick = () => {
-    if (value || isEnd) return;
-    setValue(user);
+    if (isEnd || currentValue) return;
     const newBoard = [...board];
     newBoard[index] = user;
     setBoard(newBoard);
