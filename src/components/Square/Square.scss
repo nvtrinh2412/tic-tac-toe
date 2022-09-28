@@ -1,0 +1,31 @@
+.square {
+  width: 2rem;
+  height: 2rem;
+  background-color: whitesmoke;
+  box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.2rem;
+  &__value {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    &--X {
+      color: #ff0000;
+      background-color: #ffcccc;
+    }
+    &--O {
+      color: #0000ff;
+      background-color: #ccccff;
+    }
+    &--winner {
+      background-color: #31ff31fd;
+    }
+
+    &--disabled {
+      pointer-events: none;
+    }
+  }
+}
