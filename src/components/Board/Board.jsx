@@ -2,11 +2,11 @@ import classNames from "classnames";
 import React, { useState } from "react";
 import checkResultGame from "../../helpers/checkResultGame";
 import Square from "../Square/Square";
+import {COL, ROW} from '../../constants/Board'
 import "./Board.scss";
-const ROWS = 8;
-const COLS = 8;
-const initialBoard = Array(ROWS * COLS).fill(null);
-const Board = () => {
+const initialBoard = Array(ROW * COL).fill(null);
+const Board = (props) => {
+  const { history, setHistory } = props;
   const [board, setBoard] = useState([...initialBoard]);
   const [isX, setIsX] = useState(true);
   const userTurn = isX ? "X" : "O";
@@ -20,6 +20,7 @@ const Board = () => {
   const handlePlayAgain = () => {
     const newBoard = [...initialBoard];
     setBoard(newBoard);
+    setHistory([]);
     setIsX(true);
   };
 
@@ -49,6 +50,8 @@ const Board = () => {
           {board.map((square, i) => (
             <div key={i} className="square">
               <Square
+                history={history}
+                setHistory={setHistory}
                 user={userTurn}
                 setTurn={setIsX}
                 board={board}

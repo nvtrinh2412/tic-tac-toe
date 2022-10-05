@@ -12,11 +12,19 @@ const Square = (props) => {
     setBoard,
     isEnd,
     currentValue,
+    history,
+    setHistory,
   } = props;
   const handleClick = () => {
     if (isEnd || currentValue) return;
     const newBoard = [...board];
     newBoard[index] = user;
+    const newHistory = {
+      player: user,
+      position: index,
+    };
+    setHistory([...history, newHistory]);
+    console.log(history);
     setBoard(newBoard);
     setTurn(!turn);
   };

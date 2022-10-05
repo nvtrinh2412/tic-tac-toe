@@ -1,0 +1,57 @@
+.history{
+
+  &__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 20rem;
+    height: 80vh;
+    padding: 2rem;
+    background-color: aquamarine;
+    margin-left: 3rem;
+    border: 0.5rem solid aquamarine;
+    border-radius: 0.5rem;
+    overflow-y: scroll;
+  }
+
+  &__reverse{
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: white;
+    width: 40%;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 0.5rem;
+  }
+  
+  &__turn{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    &-item{
+      margin-bottom: 1rem;
+      border: 0.1rem solid black;
+      color: white;
+      border-radius: 0.5rem;
+      &--X{
+        background-color: rgb(234, 38, 38);
+      }
+      &--O{
+        background-color: rgb(53, 53, 229);
+      }
+  
+      &-title{
+        display: inline-block;
+        padding: 0.4rem;
+      }
+      &-player{
+        float : right;
+        justify-content: end;
+        padding: 0.4rem;
+      }
+    }
+  }
+
+}
